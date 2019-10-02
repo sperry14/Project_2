@@ -8,37 +8,10 @@
   <title>AP Style</title>
   <meta name="description" content="MEJO 487 Exercise 2">
   <meta name="author" content="Samantha Perry">
-
-	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-	    	$('#pagepiling').pagepiling({
-	        direction: 'horizontal',
-	    		menu: '#menu',
-	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-			    sectionsColor: ['#4B9CD3', '#4B9CD3', '#4B9CD3', '#4B9CD3', '#4B9CD3', '#4B9CD3'],
-			    navigation: {
-			    	'position': 'right',
-			   		'tooltips': ['Home', 'Name & Title', 'Dates & Time', 'Numbers', 'Punctuation', 'Quiz']
-			   	},
-			    afterRender: function(){
-			    	$('#pp-nav').addClass('custom');
-			    },
-			    afterLoad: function(anchorLink, index){
-			    	if(index>1){
-			    		$('#pp-nav').removeClass('custom');
-			    	}else{
-			    		$('#pp-nav').addClass('custom');
-			    	}
-			    }
-			});
-	    });
-    </script>
 </head>
 <body>
 	<ul id="menu">
@@ -56,41 +29,78 @@
         <div class="intro">
 	    	<h1>So, you want to be a journalist? </h1>
 			  <p>While being a story teller and having a nose for news are both important qualities to have, the most important thing you need to know is how to write like a journalist. To do that, you need to learn about the AP Style Guide.</p>
+        <p>After learning about the basics of AP Style, you can complete a fun quiz to see if you’re ready to be a reporter!</p>
       </div>
 	</div>
 
 	 <div class="section" id="section2">
 	    	<div class="intro">
 	    		<h1>Names & Titles</h1>
+          <div class="row">
+            <div class="col-6"><p>According to the AP Stylebook, you should refer to subjects by their first and last name when introducing them, and then use last names only on second reference. If you are talking about multiple people with the same last name, it is acceptable to refer to them by first and last name on subsequent references.</p></div>
+            <div class="col-6"><p>When referring to a person’s title, there are a number of things to keep in mind. If the title is an occupational description such as astronaut or policeman, it is not capitalized. However, if it is a formal title that comes before the name, it is likely capitalized. It is important to check the stylebook when it comes to military, police and government titles, as some abbreviations apply.</p></div>
+          </div>
+
 	    	</div>
 	 </div>
 
 	 <div class="section" id="section3">
 	    	<div class="intro">
 	    		<h1>Date & Time</h1>
+          <div class="row">
+            <div class="col-6"><p>For dates, it is important to know that AP Style never uses st, nd, rd or th. For example, May 20 rather than May 20th. When writing the month, use abbreviations for Jan., Feb., Aug., Sept., Oct., Nov. and Dec. Write out the month completely when talking about a specific month and year, but never when the day is included.</p></div>
+            <div class="col-6"><p>Always use numerals when writing about time. Both a.m. and p.m. are lowercase and abbreviated with periods. When discussing things that happen in different time zones, it is only important to include the time zone difference if it is important to the story. Only include the specific time if it is necessary or of interest to the audience.</p></div>
+          </div>
+
 	       </div>
 	 </div>
 
    <div class="section" id="section4">
         <div class="intro">
           <h1>Numbers</h1>
+          <div class="row">
+            <div class="col-6"><p>For the most part, numbers one through nine are spelled out while anything larger is written as numerals. Always write out the number if it is at the beginning of the sentence. </div>
+            <div class="col-6"><p>Always use figures for the ages of people, animals, events or things. Also use figures when discussing fractions, money, time and mathematical instances such as dimensions. </div>
+          </div>
+
          </div>
    </div>
 
    <div class="section" id="section5">
        <div class="intro">
          <h1>Punctuation</h1>
+         <div class="row">
+           <div class="col-6"><p>It is important to understand the differences between dashes and how they are used. The shortest dash is the hyphen (-), used for connecting words. The en dash (–) is slightly longer and is commonly used to connect sports scores. The longest dash, the em dash (—), is used often in writing and provides the reader a pause. Some writers enjoy using them in lieu of commas.</p></div>
+           <div class="col-6"><p>AP Style does not use the oxford comma. The oxford comma is the comma that appears at the end of a list, normally before “and”. However, oxford commas can be used if it is crucial for clarity.</p></div>
+         </div>
         </div>
   </div>
 
   <div class="section" id="section6">
        <div class="intro">
-         <h1>Quiz</h1>
+
+<!-- Quiz help from https://www.sitepoint.com/simple-javascript-quiz/ -->
+<h1>Quiz on Important Facts</h1>
+<div class="quiz-container">
+<div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+
+
         </div>
   </div>
 
 
 	</div>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
