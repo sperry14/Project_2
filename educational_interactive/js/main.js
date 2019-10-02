@@ -22,36 +22,36 @@ $(document).ready(function() {
   });
 
 // Quiz help from https://www.sitepoint.com/simple-javascript-quiz/
-  (function() {
+(function() {
 const myQuestions = [
-  {
-    question: "Which sentence is incorrect?",
-    answers: {
-      a: "5 college students protested outside of South Building on Tuesday.",
-      b: "She is 5 feet, 6 inches tall.",
-      c: "I live about 3 miles from campus."
-    },
-    correctAnswer: "a"
+{
+  question: "Which sentence is incorrect?",
+  answers: {
+    a: "5 college students protested outside of South Building on Tuesday.",
+    b: "She is 5 feet, 6 inches tall.",
+    c: "I live about 3 miles from campus."
   },
-  {
-    question: "What is the correct way to structure a date?",
-    answers: {
-      a: "September 5 2019",
-      b: "Sept. 5 2019",
-      c: "Sept. 5, 2019"
-    },
-    correctAnswer: "c"
+  correctAnswer: "a"
+},
+{
+  question: "What is the correct way to structure a date?",
+  answers: {
+    a: "September 5 2019",
+    b: "Sept. 5 2019",
+    c: "Sept. 5, 2019"
   },
-  {
-    question: "How would you address Donald Trump on second reference?",
-    answers: {
-      a: "President Trump",
-      b: "Mr. Trump",
-      c: "Donald",
-      d: "A unless your organizations specifies differently"
-    },
-    correctAnswer: "d"
-  }
+  correctAnswer: "c"
+},
+{
+  question: "How would you address Donald Trump on second reference?",
+  answers: {
+    a: "President Trump",
+    b: "Mr. Trump",
+    c: "Donald",
+    d: "A unless your organizations specifies differently"
+  },
+  correctAnswer: "d"
+}
 ];
 
 
